@@ -4,6 +4,7 @@
 
 Possibly, in the future, more functionality will be added such as administration functionality to manage more aspects of your TS3 server. 
 
+**THIS PLUGIN IS NOT RELEASED YET AND SHOULD ONLY BE USED FOR TESTING AND DEVELOPMENT AT THIS POINT.***
 
 ## Requirements ##
 * e107 v2.x (latest)
