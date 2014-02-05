@@ -1,6 +1,12 @@
 <?php
-
-// Generated e107 Plugin Admin Area 
+/*
+ * TeamSpeak 3 plugin
+ *
+ * Copyright (C) 2014 - Tijn Kuyper (http://www.tijnkuyper.nl)
+ * Released under the terms and conditions of the
+ * GNU General Public License (http://www.gnu.org/licenses/gpl.txt)
+ *
+ */
 
 require_once('../../class2.php');
 if (!getperms('P')) 
