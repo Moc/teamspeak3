@@ -1,24 +1,24 @@
 # TeamSpeak 3 #
 
-*TeamSpeak 3* is a plugin for e107 which can be used to display TeamSpeak viewer menus, displaying the status of your TeamSpeak 3 server. In addition, more detailed information about a specific TeamSpeak 3 server can be displayed. 
+*TeamSpeak 3* is a plugin for e107 v2.x which includes TeamSpeak 3 viewer menus, displaying the status of your TeamSpeak 3 server. In addition, more detailed information about a specific TeamSpeak 3 server can be listed. 
 
-Possibly, in the future, more functionality will be added such as administration functionality to manage more aspects of your TS3 server. 
+Probably, in the future, more features will be added such as administration functionalities to manage more aspects of your TS3 server. 
 
-**THIS PLUGIN IS NOT RELEASED YET AND SHOULD ONLY BE USED FOR TESTING AND DEVELOPMENT AT THIS POINT.***
+**THIS PLUGIN IS NOT OFICIALLY RELEASED YET AND SHOULD ONLY BE USED FOR TESTING AND DEVELOPMENT AT THIS POINT.**
 
 ## Requirements ##
 * e107 v2.x (latest)
 * PHP 5.3+
 * Willingness to read the documentation ;)
 
-**To be clear**: e107 v1.x is not supported, nor is any PHP version prior to PHP 5.3! 
+**To be clear**: e107 v1.x (or prior) is not supported, nor is any PHP version prior to PHP 5.3! 
 
-If your website is running on anything lower than PHP 5.3,  you are over  **FOUR YEARS  behind on schedule!** PHP 5.3.0 was released on the 30th of June 2009, do something!
+If your website is running on anything lower than PHP 5.3.0,  you are over  **FOUR YEARS  behind on schedule!** PHP 5.3.0 was released on the 30th of June 2009, do something!
 
 
 ## Roadmap - planned features ##
-* Multiple TS3 viewer menus (able to activate in different menu areas)
-* Administration functionality (possibly)
+* Multiple TS3 viewer menus (ability to add each TS3 server viewer to different menu areas)
+* Administration functionality (under consideration)
 
 
 ## How to get help? ##
@@ -42,4 +42,4 @@ If your website is running on anything lower than PHP 5.3,  you are over  **FOUR
 ## Screenshots ##
 * Below you can find some screenshots to get an impression of the plugin
 
-*screenshots will be added asap*
+*screenshots will be added after the first release*
