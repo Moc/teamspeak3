@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Plugin name="TeamSpeak 3" lan="LAN_TS3_TITLE" version="1.0" date="2014-01-13" compatibility="2.0" installRequired="true" >
+	<author name="Tijn Kuyper" url="http://www.tijnkuyper.nl" />
+	<summary lan="LAN_TS3_SUMM">A TS3 plugin which can be used for managing your teamspeak 3 server</summary>
+	<description lan="LAN_TS3_DESC">A TS3 plugin which can be used for managing your teamspeak 3 server. Also includes a TS3 viewer menu.</description>
+	<keywords>
+		<word>teamspeak</word>
+		<word>viewer</word>
+	</keywords>
+	<category>content</category>
+	<copyright>Tijn Kuyper</copyright>
+	<adminLinks>
+		<link url="admin_config.php" description="" icon="images/icons/ts3_32.png" iconSmall="images/icons/ts3_16.png" primary="true">LAN_CONFIGURE</link>
+	</adminLinks>
+	<siteLinks>
+		<link url="{e_PLUGIN}teamspeak3/ts3.php" sef="gallery" perm="everyone">LAN_TS3_TITLE</link>	
+	</siteLinks>	
+	<pluginPrefs>
+		<pref name='ts3_devmode'>0</pref>
+		<pref name='ts3_flags'>0</pref>
+	</pluginPrefs>
+</e107Plugin>
