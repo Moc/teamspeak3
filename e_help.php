@@ -19,13 +19,15 @@ switch(vartrue($action)) {
       break;
    }
    case 'create':
+   case 'edit':
    {
       $text = LAN_TS3_H_03;
       break;
    }
+
    case 'prefs':
    {
-      $text = LAN_TS3_H_04;
+      $text = LAN_TS3_H_05;
       break;
    }
    default: 
