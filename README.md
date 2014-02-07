@@ -17,9 +17,8 @@ If your website is running on anything lower than PHP 5.3.0,  you are over  **FO
 
 
 ## Roadmap - planned features ##
-* Multiple TS3 viewer menus (ability to add each server to different menu areas)
-* Add templates to modify the layout of the viewer
-* Administration functionality (under consideration)
+* Add templates to allow modificaton of the viewer layout (get rid of HTML in class)
+* Administration functionality (under consideration - later stage)
 
 
 ## How to get help? ##
