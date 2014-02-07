@@ -55,16 +55,17 @@ class teamspeak3_servers_ui extends e_admin_ui
 		protected $perPage 			= 10; 
 			
 		protected $fields 		= array (  'checkboxes' =>   array ( 'title' => '', 'type' => null, 'data' => null, 'width' => '5%', 'thclass' => 'center', 'forced' => '1', 'class' => 'center', 'toggle' => 'e-multiselect',  ),
-		  'id' =>   array ( 'title' => LAN_ID, 'data' => 'int', 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'name' =>   array ( 'title' => LAN_NAME, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'ip' =>   array ( 'title' => LAN_IP, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'port' =>   array ( 'title' => LAN_TS3_PORT, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'Port of the server. Default is 9987.', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'qport' =>   array ( 'title' => LAN_TS3_QPORT, 'type' => 'text', 'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'Query port. Default is 10011.', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'status' =>   array ( 'title' => LAN_STATUS, 'type' => 'boolean', 'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'options' =>   array ( 'title' => 'Options', 'type' => null, 'data' => null, 'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
+		  'id'		=>	array ( 'title' => LAN_ID, 		  'data' => 'int', 		'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'name' 	=>	array ( 'title' => LAN_NAME, 	  'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'ip' 		=>  array ( 'title' => LAN_IP, 		  'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'port' 	=>  array ( 'title' => LAN_TS3_PORT,  'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'Port of the server. Default is 9987.', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'qport' 	=>  array ( 'title' => LAN_TS3_QPORT, 'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'Query port. Default is 10011.', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'zone' 	=>  array ( 'title' => LAN_TS3_ZONE,  'type' => 'text', 	'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'In which menu zone should this server be shown?', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'status' 	=>  array ( 'title' => LAN_STATUS, 	  'type' => 'boolean',  'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'options' =>	array ( 'title' => LAN_OPTIONS,   'type' => null, 		'data' => null, 'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
 		);		
 		
-		protected $fieldpref = array('id', 'name', 'ip', 'port', 'qport', 'status');
+		protected $fieldpref = array('id', 'name', 'ip', 'port', 'qport', 'zone', 'status');
 	
 		protected $prefs = array(	
 			'ts3_devmode'		=> array('title'=> LAN_TS3_DEVMODE, 'type'=>'boolean', 'data' => 'int','help'=>'Developer mode is used for testing and development. Do not enable unless specifically advised!'),

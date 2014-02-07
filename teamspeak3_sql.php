@@ -4,6 +4,7 @@ CREATE TABLE `teamspeak3_servers` (
   `ip` varchar(45) NOT NULL,
   `port` int(10) NOT NULL,
   `qport` int(10) NOT NULL,
+  `zone` int(1) NOT NULL,
   `status` int(1) NOT NULL,
   
   PRIMARY KEY (`id`)
