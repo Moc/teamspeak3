@@ -27,7 +27,7 @@ switch(vartrue($action)) {
 
    case 'prefs':
    {
-      $text = LAN_TS3_H_05;
+      $text = LAN_TS3_H_04;
       break;
    }
    default: 
