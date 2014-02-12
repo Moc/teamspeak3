@@ -15,7 +15,9 @@ $action = vartrue($_GET['action']);
 switch(vartrue($action)) {
    case 'list':
    {
-      $text = LAN_TS3_H_02;
+      $find    = array('[br]', '{', '}');
+      $replace = array('<br />', '<a href="https://github.com/Moc/teamspeak3/wiki" target="_blank">', '</a>');
+      $text    = str_replace($find, $replace, LAN_TS3_H_02);
       break;
    }
    case 'create':
@@ -24,7 +26,6 @@ switch(vartrue($action)) {
       $text = LAN_TS3_H_03;
       break;
    }
-
    case 'prefs':
    {
       $text = LAN_TS3_H_04;
@@ -32,13 +33,13 @@ switch(vartrue($action)) {
    }
    default: 
    {
-      $text = "";
+      $text = LAN_TS3_H_02;
    }
 }
 
 if($text)
 {
-	$ns -> tablerender(LAN_TS3_H_01, $text);	
+	$ns->tablerender(LAN_TS3_H_01, $text);	
 }
 
 ?>
