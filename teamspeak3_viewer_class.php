@@ -11,6 +11,7 @@
 class teamspeak3_viewer_class
 {
 
+	// TODO split this massive function up into seperate functions. Also, OOP!
 	public function viewer_zone($zone = 1)
 	{
 		$sql = e107::getDb(); 
@@ -69,7 +70,7 @@ class teamspeak3_viewer_class
 				  		// Only show the error code for admins, show general message for other users
 						if(ADMIN)
 						{
-							$text .= "Error (ID".$e->getCode()."): <br />
+							$text .= "Error (ID: ".$e->getCode()."): <br />
 								  	 <b>".$e->getMessage()."</b>";
 						}
 						else
@@ -81,7 +82,8 @@ class teamspeak3_viewer_class
 						if($ts3_pref['ts3_devmode'] == 1) 
 						{
 							e107::getAdminLog()->addError("Error when quering the server ".$name.", ".$ip.":".$port." (".$qport."), ".$e->getCode().": ".$e->getMessage()." ");
-							e107::getAdminLog()->toFile('ts3_query', 'TeamSpeak3 plugin query logfile', TRUE);
+							e107::getAdminLog()->toFile('teamspeak3_log', 'TeamSpeak3 plugin logfile', TRUE);
+							
 						}
 
 						// Render the menu containing the error message
