@@ -9,7 +9,7 @@ Probably, in the future, more features will be added such as administration func
 ## Requirements ##
 * e107 v2.x (latest)
 * PHP 5.3+
-* Willingness to read the documentation ;)
+* Willingness to read the [documentation](https://github.com/moc/teamspeak3/wiki) ;)
 
 **To be clear**: e107 v1.x (or prior) is not supported, nor is any PHP version prior to PHP 5.3! 
 
