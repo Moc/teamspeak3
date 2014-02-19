@@ -10,13 +10,14 @@
 
 if (!defined('e107_INIT')) { exit; }
 
-// Minor styling, attempt to fix issue #1 - https://github.com/Moc/teamspeak3/issues/1
+// Minor (possibly temporary) styling. Fixes #1 - https://github.com/Moc/teamspeak3/issues/1
 e107::css('inline', 
 "
 /* TeamSpeak CSS */
 .ts3_viewer
 {
-	text-align: left; 
+	margin-left: 0; 
+	margin-right: auto; 
 }
 ");
 
