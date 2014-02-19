@@ -1,6 +1,10 @@
 <?php
 /*  TeamSpeak 3 plugin - Copyright (C) 2014 - Tijn Kuyper (http://www.tijnkuyper.nl) */
 
+// page title
+define("PAGE_NAME", "TeamSpeak 3");
+
+// viewer
 define("LAN_TS3_001", "Active clients");
 
 // Errors
