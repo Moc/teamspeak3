@@ -16,7 +16,7 @@ class teamspeak3_viewer_class
 	{
 		$sql = e107::getDb(); 
 		$ns = e107::getRender(); 
-		
+
 		$ts3_pref = e107::getPlugPref('teamspeak3'); // loads the plugin preferences
 	
 		require_once("libraries/TeamSpeak3/TeamSpeak3.php");
@@ -39,11 +39,13 @@ class teamspeak3_viewer_class
 			    $qport	= $ts3_server['qport'];
 			    $status	= $ts3_server['status'];
 
+			    $cache_name = "menu_ts3_viewer_".$name.""; 
+
 			    // Clear cache when in development mode. 
-			    if($ts3_pref['ts3_devmode'] == 1) { e107::getCache()->clear("ts3_viewer_".$name.""); }
+			    if($ts3_pref['ts3_devmode'] == 1) { e107::getCache()->clear($cache_name); }
 
 		   		// Check if the server has been cached, refresh when older than 1 minute. 
-				if(!e107::getCache()->retrieve("ts3_viewer_".$name."", '1'))
+				if(!e107::getCache()->retrieve($cache_name, '1'))
 			   	{
 				    // Try and query the server
 				   	try
@@ -60,7 +62,7 @@ class teamspeak3_viewer_class
 				    	$text .= "<b>".LAN_TS3_001."</b>: ".$ts3_ServerInstance->clientCount()." / ".$ts3_ServerInstance['virtualserver_maxclients']; 
 				      	
 				      	// Cache the results, so the viewer does not query the server on every different page load. 
-				      	e107::getCache()->set("ts3_viewer_".$name."", $text);
+				      	e107::getCache()->set($cache_name, $text);
 
 				      	// Render the menu
 				      	$ns->tablerender($name, $text);
@@ -94,7 +96,7 @@ class teamspeak3_viewer_class
 				// Server has been cached and is not older than one minute, so display it. 
 				else
 				{
-					$text = e107::getCache()->retrieve("ts3_viewer_".$name."");
+					$text = e107::getCache()->retrieve($cache_name);
 					$ns->tablerender($name, $text, 'ts3_viewer');
 				}     	
 			} // end foreach
