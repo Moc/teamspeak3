@@ -59,7 +59,7 @@ class teamspeak3_servers_ui extends e_admin_ui
 		  'port' 	=>  array ( 'title' => LAN_TS3_PORT,  'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'Port of the server. Default is 9987.', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
 		  'qport' 	=>  array ( 'title' => LAN_TS3_QPORT, 'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'Query port. Default is 10011.', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
 		  'zone' 	=>  array ( 'title' => LAN_TS3_ZONE,  'type' => 'text', 	'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'In which menu zone should this server be shown?', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'status' 	=>  array ( 'title' => LAN_STATUS, 	  'type' => 'boolean',  'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'status' 	=>  array ( 'title' => LAN_STATUS, 	  'type' => 'boolean',  'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => false, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
 		  'options' =>	array ( 'title' => LAN_OPTIONS,   'type' => null, 		'data' => null,  'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
 		);		
 		
