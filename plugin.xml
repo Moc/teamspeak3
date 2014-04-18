@@ -18,5 +18,6 @@
 	<pluginPrefs>
 		<pref name='ts3_devmode'>0</pref>
 		<pref name='ts3_flags'>0</pref>
+		<pref name='ts3_additional_data'>1</pref>
 	</pluginPrefs>
 </e107Plugin>

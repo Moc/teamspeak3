@@ -64,20 +64,27 @@ class teamspeak3_servers_ui extends e_admin_ui
 		);		
 		
 		protected $fieldpref = array('id', 'name', 'ip', 'port', 'qport', 'zone', 'status');
-	
+		
+		// TODO pref help LAN
 		protected $prefs = array(	
 			'ts3_devmode'	=> array(
-				'title'=> LAN_TS3_DEVMODE, 
-				'type'=>'boolean', 
-				'data' => 'int',
-				'help'=> 'Developer mode is used for testing and development. Do not enable unless specifically advised!'
+				'title'	=> LAN_TS3_DEVMODE, 
+				'type'	=> 'boolean', 
+				'data' 	=> 'int',
+				'help'	=> 'Developer mode is used for testing and development. Do not enable unless specifically advised!'
 			),
 			'ts3_flags'	=> array(
-				'title'=> LAN_TS3_FLAGS, 
-				'type'=>'boolean', 
-				'data' => 'int',
-				'help'=> 'Shows the country flag of each client in the viewer
-			'),
+				'title'	=> LAN_TS3_FLAGS, 
+				'type'	=> 'boolean', 
+				'data' 	=> 'int',
+				'help'	=> 'Shows the country flag of each client in the viewer' 
+			),
+			'ts3_additional_data' => array(
+				'title'	=> LAN_TS3_ADD_DATA, 
+				'type'	=> 'boolean', 
+				'data' 	=> 'int',
+				'help'	=> 'Shows additional information below each teamspeak viewer such as the number of active clients' 
+			),
 		); 
 
 		public function count_zones()

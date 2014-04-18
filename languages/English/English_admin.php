@@ -11,7 +11,7 @@ define("LAN_TS3_ZONE", 	"Zone");
 // Preferences
 define("LAN_TS3_DEVMODE",	"TS3 Developer mode"); 
 define("LAN_TS3_FLAGS",		"Show country flag"); 
-
+define("LAN_TS3_ADD_DATA", 	"Show additional data");
 
 
 // Help sections
