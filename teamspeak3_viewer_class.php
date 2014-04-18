@@ -56,7 +56,7 @@ class teamspeak3_viewer_class
 				      	// Show the viewer using the viewer functionality in the TeamSpeak 3 Framework. 
 			      		$text .= $ts3_ServerInstance->getViewer(new TeamSpeak3_Viewer_Html(e_PLUGIN_ABS."teamspeak3/images/viewer/", $flags));
 			 			
-			 			// TODO: move this out of here, create separate functions which display additional data based on preferences. Styling => template. 
+			 			// TODO: move this out of here, create a separate method which displays additional data based on preferences. Styling => template. 
 						// Show additional info (current/max clients for now)
 			    		if($ts3_pref['ts3_additional_data']) 
 			    		{
@@ -74,6 +74,7 @@ class teamspeak3_viewer_class
 					// Error quering the server, show the error
 					catch(Exception $e)
 				  	{
+				  		// TODO: move this out of here, create a separate method which displays the error
 				  		// Only show the error code for admins, show general message for other users
 						if(ADMIN)
 						{
