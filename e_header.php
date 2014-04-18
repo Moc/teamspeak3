@@ -19,6 +19,11 @@ e107::css('inline',
 	margin-left: 0; 
 	margin-right: auto; 
 }
+
+.ts3_additional_data
+{
+	padding-top: 15px
+}
 ");
 
 

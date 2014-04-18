@@ -54,12 +54,16 @@ class teamspeak3_viewer_class
 				      	$ts3_ServerInstance = TeamSpeak3::factory("serverquery://".$ip.":".$qport."/?server_port=".$port."#no_query_clients");
 
 				      	// Show the viewer using the viewer functionality in the TeamSpeak 3 Framework. 
-			      		$text .=  $ts3_ServerInstance->getViewer(new TeamSpeak3_Viewer_Html(e_PLUGIN_ABS."teamspeak3/images/viewer/", $flags));
+			      		$text .= $ts3_ServerInstance->getViewer(new TeamSpeak3_Viewer_Html(e_PLUGIN_ABS."teamspeak3/images/viewer/", $flags));
 			 			
-			 			// TODO: move this out of here, create separate functions which display additional data based on preferences
-			 			// Show additional info (current/max clients for now)
-				    	$text .= "<br />";
-				    	$text .= "<b>".LAN_TS3_001."</b>: ".$ts3_ServerInstance->clientCount()." / ".$ts3_ServerInstance['virtualserver_maxclients']; 
+			 			// TODO: move this out of here, create separate functions which display additional data based on preferences. Styling => template. 
+						// Show additional info (current/max clients for now)
+			    		if($ts3_pref['ts3_additional_data']) 
+			    		{
+			    			$text .= "<div class='ts3_additional_data'>
+    							  		<strong>".LAN_TS3_001."</strong>: ".$ts3_ServerInstance->clientCount()." / ".$ts3_ServerInstance['virtualserver_maxclients']."
+    							  	  </div>";
+    					}
 				      	
 				      	// Cache the results, so the viewer does not query the server on every different page load. 
 				      	e107::getCache()->set($cache_name, $text);
@@ -106,10 +110,12 @@ class teamspeak3_viewer_class
 	private function display_ts3_error()
 	{
 
+		
 	}
 
 	private function display_additional_data()
 	{
+
 
 	}
 
