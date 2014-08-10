@@ -13,7 +13,7 @@ Probably, in the future, more features will be added such as administration func
 
 **To be clear**: e107 v1.x (or prior) is not supported, nor is any PHP version prior to PHP 5.3! 
 
-If your website is running on anything lower than PHP 5.3.0,  you are over  **FOUR YEARS  behind on schedule!** PHP 5.3.0 was released on the 30th of June 2009, do something!
+If your website is running on anything lower than PHP 5.3.0,  you are over  **FIVE YEARS  behind on schedule!** PHP 5.3.0 was released on the 30th of June 2009, do something!
 
 
 ## Roadmap - planned features ##
