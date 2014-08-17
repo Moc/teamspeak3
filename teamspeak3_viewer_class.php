@@ -10,20 +10,23 @@
 
 class teamspeak3_viewer_class
 {
+	public $ts3_pref; 
 
-	// TODO split this massive function up into seperate functions. Also, OOP!
+	function __construct()
+	{
+		$this->ts3_pref = e107::getPlugPref('teamspeak3'); // loads the plugin preferences
+	}
+
 	public function viewer_zone($zone = 1)
 	{
 		$sql = e107::getDb(); 
 		$ns = e107::getRender(); 
 
-		$ts3_pref = e107::getPlugPref('teamspeak3'); // loads the plugin preferences
-	
 		require_once("libraries/TeamSpeak3/TeamSpeak3.php");
 		TeamSpeak3::init();
 
 		// If 'ts3_flags' pref is set to true, enable flags by setting the flag path. If empty, the viewer will not show flags. 
-		if($ts3_pref['ts3_flags']) { $flags = e_PLUGIN."teamspeak3/images/flags/"; }
+		if($this->ts3_pref['ts3_flags']) { $flags = e_PLUGIN."teamspeak3/images/flags/"; }
 		
 		// retrieve active (status = 1) servers in specified zone (default = 1), 
 		$ts3_servers = $sql->retrieve('teamspeak3_servers', 'name, ip, port, qport, zone, status', 'zone = '.$zone.' AND status = 1', TRUE);
@@ -42,7 +45,7 @@ class teamspeak3_viewer_class
 			    $cache_name = "menu_ts3_viewer_".$name.""; 
 
 			    // Clear cache when in development mode. 
-			    if($ts3_pref['ts3_devmode'] == 1) { e107::getCache()->clear($cache_name); }
+			    if($this->ts3_pref['ts3_devmode']) { e107::getCache()->clear($cache_name); }
 
 		   		// Check if the server has been cached, refresh when older than 1 minute. 
 				if(!e107::getCache()->retrieve($cache_name, '1'))
@@ -55,15 +58,16 @@ class teamspeak3_viewer_class
 
 				      	// Show the viewer using the viewer functionality in the TeamSpeak 3 Framework. 
 			      		$text .= $ts3_ServerInstance->getViewer(new TeamSpeak3_Viewer_Html(e_PLUGIN_ABS."teamspeak3/images/viewer/", $flags));
-			 			
-			 			// TODO: move this out of here, create a separate method which displays additional data based on preferences. Styling => template. 
-						// Show additional info (current/max clients for now)
-			    		if($ts3_pref['ts3_additional_data']) 
+			 						 			
+						// Show additional info 
+			    		if($this->ts3_pref['ts3_additional_data']) 
 			    		{
-			    			$text .= "<div class='ts3_additional_data'>
-    							  		<strong>".LAN_TS3_001."</strong>: ".$ts3_ServerInstance->clientCount()." / ".$ts3_ServerInstance['virtualserver_maxclients']."
-    							  	  </div>";
-    					}
+			    			// TODO styling => template & customization (which addtional data to show)
+							// (current/max clients for now)
+							$text .= "<div class='ts3_additional_data'>
+								  		<strong>".LAN_TS3_001."</strong>: ".$ts3_ServerInstance->clientCount()." / ".$ts3_ServerInstance['virtualserver_maxclients']."
+								  	  </div>";
+			    		}
 				      	
 				      	// Cache the results, so the viewer does not query the server on every different page load. 
 				      	e107::getCache()->set($cache_name, $text);
@@ -74,7 +78,6 @@ class teamspeak3_viewer_class
 					// Error quering the server, show the error
 					catch(Exception $e)
 				  	{
-				  		// TODO: move this out of here, create a separate method which displays the error
 				  		// Only show the error code for admins, show general message for other users
 						if(ADMIN)
 						{
@@ -87,11 +90,10 @@ class teamspeak3_viewer_class
 						}
 						
 						// If developer mode enabled, log the error to the log file
-						if($ts3_pref['ts3_devmode'] == 1) 
+						if($this->ts3_pref['ts3_devmode']) 
 						{
 							e107::getAdminLog()->addError("Error when quering the server ".$name.", ".$ip.":".$port." (".$qport."), ".$e->getCode().": ".$e->getMessage()." ");
 							e107::getAdminLog()->toFile('teamspeak3_log', 'TeamSpeak3 plugin logfile', TRUE);
-							
 						}
 
 						// Render the menu containing the error message
@@ -107,19 +109,6 @@ class teamspeak3_viewer_class
 			} // end foreach
 		} // No server records found in the database
 	}
-
-	private function display_ts3_error()
-	{
-
-		
-	}
-
-	private function display_additional_data()
-	{
-
-
-	}
-
 
 }
 ?>
