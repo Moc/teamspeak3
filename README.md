@@ -18,6 +18,7 @@ If your website is running on anything lower than PHP 5.3.0,  you are over  **FI
 
 ## Roadmap - planned features ##
 * Add templates to allow modificaton of the viewer layout (get rid of HTML in class)
+* Allow setting options such as 'Additional info' and 'Country flags' per server individually
 * Administration functionality (under consideration - later stage)
 
 
@@ -36,7 +37,7 @@ If your website is running on anything lower than PHP 5.3.0,  you are over  **FI
  
 
 ## Anything else? ##
-* Seriously? :) Well, if there is something going on that is not answered by anything of what is mentioned above, simply [drop me a PM on e107.org](http://e107.org/e107_plugins/pm/pm.php?send.44563). I'll get back to you as soon as I can.
+* Seriously? :) Well, if there is something going on that is not answered by anything of what is mentioned above, simply drop me an email PM on github@tijnkuyper.nl. I'll get back to you as soon as I can.
 
 
 ## Screenshots ##
