@@ -85,6 +85,12 @@ class teamspeak3_servers_ui extends e_admin_ui
 				'data' 	=> 'int',
 				'help'	=> 'Shows the country flag of each client in the viewer'
 			),
+			'ts3_connect_button' => array(
+				'title'	=> LAN_TS3_CONN_BUTTON,
+				'type'	=> 'boolean',
+				'data' 	=> 'int',
+				'help'	=> 'Shows a connect button which allows people to connect to your server through the viewer'
+			),
 			'ts3_additional_data' => array(
 				'title'	=> LAN_TS3_ADD_DATA,
 				'type'	=> 'boolean',

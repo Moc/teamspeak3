@@ -69,6 +69,15 @@ class teamspeak3_viewer_class
 								  	  </div>";
 			    		}
 
+		    			// Show connect button
+			    		if($this->ts3_pref['ts3_connect_button'])
+			    		{
+			    			$text .= "<div id='ts3_connect'>
+			    						<a class='btn btn-large btn-info' href='ts3server://".$ip."?port=".$port."'>Connect</a>
+									  </div>";
+			    		}
+
+
 				      	// Cache the results (when enabled), so the viewer does not query the server on every different page load.
 				      	if($this->ts3_pref['ts3_caching'])
 				      	{

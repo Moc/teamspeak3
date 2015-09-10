@@ -20,5 +20,6 @@
 		<pref name='ts3_caching'>1</pref>
 		<pref name='ts3_flags'>0</pref>
 		<pref name='ts3_additional_data'>1</pref>
+		<pref name='ts3_connect_button'>1</pref>
 	</pluginPrefs>
 </e107Plugin>
