@@ -25,15 +25,15 @@ switch(vartrue($action))
    case 'edit':
    {
       $find    = array('{', '}');
-      $replace = array('<a href="https://github.com/moc/teamspeak3/wiki/Adding-new-servers" target="_blank">', '</a>');
+      $replace = array('<a href="https://github.com/Moc/teamspeak3/wiki/Adding-new-servers" target="_blank">', '</a>');
       $text    = str_replace($find, $replace, LAN_TS3_H_03);
       break;
    }
    case 'prefs':
    {
       $find    = array('{', '}');
-      $replace = array('<a href="https://github.com/moc/teamspeak3/wiki/Preferences" target="_blank">', '</a>');
-      $text = LAN_TS3_H_04;
+      $replace = array('<a href="https://github.com/Moc/teamspeak3/wiki/Preferences" target="_blank">', '</a>');
+      $text    = str_replace($find, $replace, LAN_TS3_H_04);
       break;
    }
    default: 
