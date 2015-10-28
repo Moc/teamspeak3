@@ -6,6 +6,5 @@ CREATE TABLE `teamspeak3_servers` (
   `qport` int(10) NOT NULL,
   `zone` int(1) NOT NULL,
   `status` int(1) NOT NULL,
-  
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM;
