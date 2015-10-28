@@ -12,7 +12,8 @@ if (!defined('e107_INIT')) { exit; }
 
 $action = vartrue($_GET['action']);
 
-switch(vartrue($action)) {
+switch(vartrue($action)) 
+{
    case 'list':
    {
       $find    = array('[br]', '{', '}');
@@ -23,11 +24,15 @@ switch(vartrue($action)) {
    case 'create':
    case 'edit':
    {
-      $text = LAN_TS3_H_03;
+      $find    = array('{', '}');
+      $replace = array('<a href="https://github.com/moc/teamspeak3/wiki/Adding-new-servers" target="_blank">', '</a>');
+      $text    = str_replace($find, $replace, LAN_TS3_H_03);
       break;
    }
    case 'prefs':
    {
+      $find    = array('{', '}');
+      $replace = array('<a href="https://github.com/moc/teamspeak3/wiki/Preferences" target="_blank">', '</a>');
       $text = LAN_TS3_H_04;
       break;
    }
