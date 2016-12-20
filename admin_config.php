@@ -43,7 +43,7 @@ class teamspeak3_admin extends e_admin_dispatcher
 	protected $menuTitle = 'TeamSpeak 3';
 }
 
-
+e107::lan('teamspeak3', 'admin', true);
 class teamspeak3_servers_ui extends e_admin_ui
 {
 		protected $pluginTitle		= 'TeamSpeak 3';
