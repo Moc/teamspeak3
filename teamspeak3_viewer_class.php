@@ -73,7 +73,7 @@ class teamspeak3_viewer_class
 			    		if($this->ts3_pref['ts3_connect_button'])
 			    		{
 			    			$text .= "<div id='ts3_connect'>
-			    						<a class='btn btn-large btn-info' href='ts3server://".$ip."?port=".$port."'>Connect</a>
+			    						<a class='btn btn-large btn-info' href='ts3server://".$ip."?port=".$port."'>".LAN_TS3_E_02."</a>
 									  </div>";
 			    		}
 
