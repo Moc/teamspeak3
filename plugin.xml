@@ -12,9 +12,6 @@
 	<adminLinks>
 		<link url="admin_config.php" description="" icon="images/icons/ts3_32.png" iconSmall="images/icons/ts3_16.png" primary="true" >LAN_CONFIGURE</link>
 	</adminLinks>
-	<siteLinks>
-		<link url="{e_PLUGIN}teamspeak3/ts3.php" sef="index" perm="everyone" >LAN_TS3_TITLE</link>
-	</siteLinks>
 	<pluginPrefs>
 		<pref name='ts3_devmode'>0</pref>
 		<pref name='ts3_caching'>1</pref>
