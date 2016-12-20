@@ -29,4 +29,5 @@ define("LAN_TS3_H_09",	"Megjeleníti a további információkat és az aktív fe
 define("LAN_TS3_H_10",	"Szerver Port. Alapértelmezett: 9987.");
 define("LAN_TS3_H_11",	"Lekérdezési Port. Alapértelmezett: 10011.");
 define("LAN_TS3_H_12",	"Melyik menü zónában jelenjen meg ez a szerver?");
+
 ?>
