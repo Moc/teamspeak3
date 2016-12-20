@@ -56,9 +56,9 @@ class teamspeak3_servers_ui extends e_admin_ui
 		  'id'		=>	array ( 'title' => LAN_ID, 		  'data' => 'int', 						 'width' => 'auto', 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
 		  'name' 	=>	array ( 'title' => LAN_NAME, 	  'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
 		  'ip' 		=>  array ( 'title' => LAN_IP, 		  'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'port' 	=>  array ( 'title' => LAN_TS3_PORT,  'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'Port of the server. Default is 9987.', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'qport' 	=>  array ( 'title' => LAN_TS3_QPORT, 'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'Query port. Default is 10011.', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
-		  'zone' 	=>  array ( 'title' => LAN_TS3_ZONE,  'type' => 'dropdown', 'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => 'In which menu zone should this server be shown?', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'port' 	=>  array ( 'title' => LAN_TS3_PORT,  'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => LAN_TS3_H_10, 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'qport' 	=>  array ( 'title' => LAN_TS3_QPORT, 'type' => 'text', 	'data' => 'str', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => LAN_TS3_H_11, 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
+		  'zone' 	=>  array ( 'title' => LAN_TS3_ZONE,  'type' => 'dropdown', 'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => true, 'help' => LAN_TS3_H_12, 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
 		  'status' 	=>  array ( 'title' => LAN_STATUS, 	  'type' => 'boolean',  'data' => 'int', 'width' => 'auto', 'filter' => true, 'inline' => true, 'validate' => false, 'help' => '', 'readParms' => '', 'writeParms' => '', 'class' => 'center', 'thclass' => 'center',  ),
 		  'options' =>	array ( 'title' => LAN_OPTIONS,   'type' => null, 		'data' => null,  'width' => '10%', 'thclass' => 'center last', 'class' => 'center last', 'forced' => '1',  ),
 		);
@@ -71,31 +71,31 @@ class teamspeak3_servers_ui extends e_admin_ui
 				'title'	=> LAN_TS3_DEVMODE,
 				'type'	=> 'boolean',
 				'data' 	=> 'int',
-				'help'	=> 'Developer mode is used for testing and development. Do not enable unless specifically advised!'
+				'help'	=> LAN_TS3_H_05
 			),
 			'ts3_caching' => array(
 				'title'	=> LAN_TS3_CACHING,
 				'type'	=> 'boolean',
 				'data' 	=> 'int',
-				'help'	=> 'Caching saves a recent copy of the data to avoid reaching the flood limit (see docs).'
+				'help'	=> LAN_TS3_H_06
 			),
 			'ts3_flags'	=> array(
 				'title'	=> LAN_TS3_FLAGS,
 				'type'	=> 'boolean',
 				'data' 	=> 'int',
-				'help'	=> 'Shows the country flag of each client in the viewer'
+				'help'	=> LAN_TS3_H_07
 			),
 			'ts3_connect_button' => array(
 				'title'	=> LAN_TS3_CONN_BUTTON,
 				'type'	=> 'boolean',
 				'data' 	=> 'int',
-				'help'	=> 'Shows a connect button which allows people to connect to your server through the viewer'
+				'help'	=> LAN_TS3_H_08
 			),
 			'ts3_additional_data' => array(
 				'title'	=> LAN_TS3_ADD_DATA,
 				'type'	=> 'boolean',
 				'data' 	=> 'int',
-				'help'	=> 'Shows additional information below each teamspeak viewer such as the number of active clients'
+				'help'	=> LAN_TS3_H_09
 			),
 		);
 
