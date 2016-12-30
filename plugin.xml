@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Plugin name="TeamSpeak 3" lan="" version="1.0" date="2014-01-13" compatibility="2.0" installRequired="true" >
+<e107Plugin name="TeamSpeak 3" lan="LAN_TS3_TITLE" version="1.0" date="2014-01-13" compatibility="2.0" installRequired="true" >
 	<author name="Tijn Kuyper" url="http://www.tijnkuyper.nl" />
 	<summary lan="LAN_TS3_SUMM">A TS3 plugin which can be used for managing your teamspeak 3 server</summary>
 	<description lan="LAN_TS3_DESC">A TS3 plugin which can be used for managing your teamspeak 3 server. Also includes a TS3 viewer menu.</description>
@@ -9,13 +9,16 @@
 	</keywords>
 	<category>content</category>
 	<copyright>Tijn Kuyper</copyright>
+	<siteLinks>
+ 		<link url="{e_PLUGIN}teamspeak3/ts3.php" sef="index" perm="everyone">LAN_TS3_TITLE</link>
+ 	</siteLinks>
 	<adminLinks>
-		<link url="admin_config.php" description="" icon="images/icons/ts3_32.png" iconSmall="images/icons/ts3_16.png" primary="true" >LAN_CONFIGURE</link>
+		<link url="admin_config.php" description="" icon="images/icons/ts3_32.png" iconSmall="images/icons/ts3_16.png" primary="true">LAN_CONFIGURE</link>
 	</adminLinks>
 	<pluginPrefs>
 		<pref name='ts3_devmode'>0</pref>
 		<pref name='ts3_caching'>1</pref>
-		<pref name='ts3_flags'>1</pref>
+		<pref name='ts3_flags'>0</pref>
 		<pref name='ts3_additional_data'>1</pref>
 		<pref name='ts3_connect_button'>1</pref>
 	</pluginPrefs>
