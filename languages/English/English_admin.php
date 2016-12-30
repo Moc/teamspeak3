@@ -1,5 +1,5 @@
 <?php
-/*  TeamSpeak 3 plugin - Copyright (C) 2015 - Tijn Kuyper (http://www.tijnkuyper.nl) */
+/*  TeamSpeak 3 - Copyright (C) 2015 - 2017 - Tijn Kuyper (http://www.tijnkuyper.nl) */
 
 // Main
 define("LAN_TS3_PORT", 	"Port");
