@@ -23,7 +23,7 @@ $php_version = phpversion();
 if(version_compare($php_version, 5.3, "<"))
 {
 	require_once(HEADERF);
-	$text = 'A minimum version of PHP 5.3 is required.';
+	$text = LAN_TS3_E_03;
 	e107::getRender()->tablerender("TeamSpeak3 - Error", $text); 
 	require_once(FOOTERF);
 	exit;
@@ -36,13 +36,10 @@ require_once(HEADERF);
 
 // Ok, all neccessary files are included, all checks have been passed: we are good to go.
 
-$text = "
-	This page will display detailed information about a specific teamspeak 3 server. <br /> 
-	Work in progress!
-";
+$text = LAN_TS3_E_04;
 
 // Let's render and show it!
-e107::getRender()->tablerender("TeamSpeak 3 - Detailed information", $text);
+e107::getRender()->tablerender(LAN_TS3_E_05, $text);
 
 require_once(FOOTERF);
 exit;
