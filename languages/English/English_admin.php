@@ -27,4 +27,3 @@ define("LAN_TS3_H_09",	"Shows additional information below each teamspeak viewer
 define("LAN_TS3_H_10",	"Port of the server. Default is 9987.");
 define("LAN_TS3_H_11",	"Query port. Default is 10011.");
 define("LAN_TS3_H_12",	"In which menu zone should this server be shown?");
-?>

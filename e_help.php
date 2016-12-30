@@ -14,6 +14,7 @@ $action = vartrue($_GET['action']);
 
 switch(vartrue($action)) 
 {
+   default:
    case 'list':
    {
       $find    = array('[br]', '{', '}');
@@ -36,15 +37,9 @@ switch(vartrue($action))
       $text    = str_replace($find, $replace, LAN_TS3_H_04);
       break;
    }
-   default: 
-   {
-      $text = LAN_TS3_H_02;
-   }
 }
 
 if($text)
 {
 	$ns->tablerender(LAN_TS3_H_01, $text);	
 }
-
-?>
