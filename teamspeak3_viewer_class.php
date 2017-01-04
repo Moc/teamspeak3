@@ -14,7 +14,7 @@ class teamspeak3_viewer_class
 
 	function __construct()
 	{
-		$this->ts3_pref = e107::getPref('teamspeak3'); // loads the plugin preferences
+		$this->ts3_pref = e107::getPlugPref('teamspeak3'); // loads the plugin preferences
 	}
 
 	public function viewer_zone($zone = 1)
