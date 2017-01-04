@@ -29,7 +29,7 @@ class teamspeak3_viewer_class
 		if($this->ts3_pref['ts3_flags']) { $flags = e_PLUGIN."teamspeak3/images/flags/"; }
 
 		// retrieve active (status = 1) servers in specified zone (default = 1),
-		$ts3_servers = $sql->retrieve('teamspeak3_servers', 'name, ip, port, qport, zone, status', 'zone = '.$zone.' AND status = 1', TRUE);
+		$ts3_servers = $sql->retrieve('teamspeak3_servers', 'name, ip, port, qport, password, zone, status', 'zone = '.$zone.' AND status = 1', TRUE);
 
 		if($ts3_servers)
 		{
@@ -40,6 +40,7 @@ class teamspeak3_viewer_class
 			    $ip    	= $ts3_server['ip'];
 			    $port  	= $ts3_server['port'];
 			    $qport	= $ts3_server['qport'];
+			    $pass	= $ts3_server['password'];
 			    $status	= $ts3_server['status'];
 
 			    $cache_name = "menu_ts3_viewer_".$name."";
@@ -73,7 +74,7 @@ class teamspeak3_viewer_class
 			    		if($this->ts3_pref['ts3_connect_button'])
 			    		{
 			    			$text .= "<div id='ts3_connect'>
-			    						<a class='btn btn-default' href='ts3server://".$ip."?port=".$port."'>".LAN_TS3_E_02."</a>
+			    						<a class='btn btn-default' href='ts3server://".$ip."?port=".$port."&nickname=Guest&password=".$pass."'>".LAN_TS3_E_02."</a>
 									  </div>";
 			    		}
 
