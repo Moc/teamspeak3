@@ -5,6 +5,7 @@
 define("LAN_TS3_PORT", 	"Port");
 define("LAN_TS3_QPORT", "Query Port");
 define("LAN_TS3_ZONE", 	"Zone");
+define("LAN_TS3_PASSWORD", "Password");
 
 // Preferences
 define("LAN_TS3_DEVMODE", "TS3 Developer mode");

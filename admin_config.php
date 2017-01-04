@@ -132,6 +132,18 @@ class teamspeak3_servers_ui extends e_admin_ui
 		  		'class' => 'center', 
 		  		'thclass' => 'center',  
 		  	),
+		  	'password' => array(
+		  		'title' => LAN_TS3_PASSWORD, 
+		  		'type' => 'text', 	
+		  		'data' => 'str', 
+		  		'width' => 'auto',  
+		  		'inline' => true,  
+		  		'help' => '', 
+		  		'readParms' => '', 
+		  		'writeParms' => '', 
+		  		'class' => 'center', 
+		  		'thclass' => 'center',  
+		  	),
 		  	'zone' => array( 
 		  		'title' => LAN_TS3_ZONE,  
 		  		'type' => 'dropdown', 
@@ -171,7 +183,7 @@ class teamspeak3_servers_ui extends e_admin_ui
 		  	),
 		);
 
-		protected $fieldpref = array('id', 'name', 'ip', 'port', 'qport', 'zone', 'status');
+		protected $fieldpref = array('id', 'name', 'ip', 'port', 'qport', 'password', 'zone', 'status');
 
 		// TODO pref help LAN
 		protected $prefs = array(
